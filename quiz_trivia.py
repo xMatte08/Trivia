@@ -1,4 +1,5 @@
 import tkinter as tk
+import csv
 from tkinter import font as tkfont
 from PIL import Image, ImageTk
 
@@ -81,6 +82,15 @@ class SchermataQuiz:
         for b in self.bottoni_risposte:
             b.config(state="disabled")
 
+
+
+
+
+
+
+
+
+
 class LoginSchermo:
     def __init__(self, root, on_login_success):
         self.root = root
@@ -117,8 +127,14 @@ class LoginSchermo:
         return e
 
     def esegui_login(self):
-        self.main_frame.destroy() 
+        nome_inserito = self.user_entry.get()
+        pass_inserita = self.pass_entry.get()
+  
+        self.main_frame.destroy()
         self.on_login_success()
+        
+    
+
 
 class SelezioneQuiz:
     def __init__(self, root):
